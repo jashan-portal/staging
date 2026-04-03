@@ -1,8 +1,21 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; URL=/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting…</title>
+    <script>
+      // GitHub Pages SPA deep-link fallback.
+      // Redirects to the app root while preserving the requested path + query + hash.
+      (function () {
+        var segmentCount = 1; // project pages: /<repo>/
+        var l = window.location;
+        var repoRoot = l.pathname.split("/").slice(0, 1 + segmentCount).join("/") + "/";
+        var pathAfterRoot = l.pathname.split("/").slice(1 + segmentCount).join("/");
+        var redirect = repoRoot + "?/" + pathAfterRoot + (l.search ? "&" + l.search.slice(1) : "") + l.hash;
+        l.replace(redirect);
+      })();
+    </script>
   </head>
   <body></body>
-</html>
 </html>
