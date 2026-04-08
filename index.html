@@ -78,7 +78,14 @@
         }
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-B7WpUaB6.js"></script>
+    <script>
+      // Prevent browser's default anchor scroll on page load
+      if (window.location.hash) {
+        window.history.scrollRestoration = "manual";
+        window.scrollTo(0, 0);
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-DeBcG3G8.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CIprFSwF.css">
   </head>
   <body>
