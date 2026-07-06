@@ -1,1 +1,0 @@
-import"./index-DUAGF5-2.js";const n=(t,e)=>({hidden:{y:t==="up"?40:t==="down"?-40:0,x:t==="left"?40:t==="right"?-20:0},show:{x:0,y:0,opacity:1,transition:{delay:e,type:"tween",duration:1.2,ease:[.25,.25,.25,.75]}}});export{n as f};
